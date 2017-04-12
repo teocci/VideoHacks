@@ -28,6 +28,7 @@ import com.android.videohacks.gles.EglCore;
 import com.android.videohacks.gles.FullFrameRect;
 import com.android.videohacks.gles.Texture2dProgram;
 import com.android.videohacks.gles.WindowSurface;
+import com.android.videohacks.ui.MainActivity;
 
 import java.io.File;
 import java.io.IOException;

@@ -19,6 +19,8 @@ package com.android.videohacks;
 import android.media.MediaCodec;
 import android.util.Log;
 
+import com.android.videohacks.ui.MainActivity;
+
 import java.nio.ByteBuffer;
 
 /**

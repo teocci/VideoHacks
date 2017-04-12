@@ -23,6 +23,8 @@ import android.media.MediaMuxer;
 import android.util.Log;
 import android.view.Surface;
 
+import com.android.videohacks.ui.MainActivity;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;

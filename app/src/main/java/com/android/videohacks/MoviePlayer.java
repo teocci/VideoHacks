@@ -24,6 +24,8 @@ import android.os.Message;
 import android.util.Log;
 import android.view.Surface;
 
+import com.android.videohacks.ui.MainActivity;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

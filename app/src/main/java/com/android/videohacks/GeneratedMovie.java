@@ -25,6 +25,8 @@ import android.view.Surface;
 
 import com.android.videohacks.gles.EglCore;
 import com.android.videohacks.gles.WindowSurface;
+import com.android.videohacks.interfaces.Content;
+import com.android.videohacks.ui.MainActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,7 +35,8 @@ import java.nio.ByteBuffer;
 /**
  * Base class for generated movies.
  */
-public abstract class GeneratedMovie implements Content {
+public abstract class GeneratedMovie implements Content
+{
     private static final String TAG = MainActivity.TAG;
     private static final boolean VERBOSE = false;
 

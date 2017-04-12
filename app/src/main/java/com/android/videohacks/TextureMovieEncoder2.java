@@ -21,6 +21,8 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
+import com.android.videohacks.ui.MainActivity;
+
 import java.lang.ref.WeakReference;
 
 /**

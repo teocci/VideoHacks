@@ -26,16 +26,20 @@ import android.util.Log;
 import android.view.InflateException;
 import android.view.View;
 
+import com.android.videohacks.ui.MainActivity;
+
 /**
  * Creates and displays an "about" box.
  */
-public class AboutBox {
+public class AboutBox
+{
     private static final String TAG = MainActivity.TAG;
 
     /**
      * Retrieves the application's version info.
      */
-    private static String getVersionString(Context context) {
+    private static String getVersionString(Context context)
+    {
         PackageManager pman = context.getPackageManager();
         String packageName = context.getPackageName();
         try {
@@ -54,7 +58,8 @@ public class AboutBox {
      * The box will disappear if the "OK" button is touched, if an area outside the box is
      * touched, if the screen is rotated ... doing just about anything makes it disappear.
      */
-    public static void display(Activity caller) {
+    public static void display(Activity caller)
+    {
         String versionStr = getVersionString(caller);
         String aboutHeader = caller.getString(R.string.app_name) + " v" + versionStr;
 

@@ -1,19 +1,3 @@
-/*
- * Copyright 2014 Google Inc. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.android.videohacks;
 
 import android.content.Context;
@@ -22,26 +6,32 @@ import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.android.videohacks.ui.MainActivity;
+
 /**
  * Layout that adjusts to maintain a specific aspect ratio.
  */
-public class AspectFrameLayout extends FrameLayout {
+public class AspectFrameLayout extends FrameLayout
+{
     private static final String TAG = MainActivity.TAG + "-AFL";
 
     private double mTargetAspect = -1.0;        // initially use default window size
 
-    public AspectFrameLayout(Context context) {
+    public AspectFrameLayout(Context context)
+    {
         super(context);
     }
 
-    public AspectFrameLayout(Context context, AttributeSet attrs) {
+    public AspectFrameLayout(Context context, AttributeSet attrs)
+    {
         super(context, attrs);
     }
 
     /**
      * Sets the desired aspect ratio.  The value is <code>width / height</code>.
      */
-    public void setAspectRatio(double aspectRatio) {
+    public void setAspectRatio(double aspectRatio)
+    {
         if (aspectRatio < 0) {
             throw new IllegalArgumentException();
         }
@@ -53,7 +43,8 @@ public class AspectFrameLayout extends FrameLayout {
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
+    {
         Log.d(TAG, "onMeasure target=" + mTargetAspect +
                 " width=[" + MeasureSpec.toString(widthMeasureSpec) +
                 "] height=[" + View.MeasureSpec.toString(heightMeasureSpec) + "]");
@@ -65,10 +56,10 @@ public class AspectFrameLayout extends FrameLayout {
             int initialHeight = MeasureSpec.getSize(heightMeasureSpec);
 
             // factor the padding out
-            int horizPadding = getPaddingLeft() + getPaddingRight();
-            int vertPadding = getPaddingTop() + getPaddingBottom();
-            initialWidth -= horizPadding;
-            initialHeight -= vertPadding;
+            int horizontalPadding = getPaddingLeft() + getPaddingRight();
+            int verticalPadding = getPaddingTop() + getPaddingBottom();
+            initialWidth -= horizontalPadding;
+            initialHeight -= verticalPadding;
 
             double viewAspectRatio = (double) initialWidth / initialHeight;
             double aspectDiff = mTargetAspect / viewAspectRatio - 1;
@@ -88,16 +79,16 @@ public class AspectFrameLayout extends FrameLayout {
                     initialWidth = (int) (initialHeight * mTargetAspect);
                 }
                 Log.d(TAG, "new size=" + initialWidth + "x" + initialHeight + " + padding " +
-                        horizPadding + "x" + vertPadding);
-                initialWidth += horizPadding;
-                initialHeight += vertPadding;
+                        horizontalPadding + "x" + verticalPadding);
+                initialWidth += horizontalPadding;
+                initialHeight += verticalPadding;
                 widthMeasureSpec = MeasureSpec.makeMeasureSpec(initialWidth, MeasureSpec.EXACTLY);
                 heightMeasureSpec = MeasureSpec.makeMeasureSpec(initialHeight, MeasureSpec.EXACTLY);
             }
         }
 
-        //Log.d(TAG, "set width=[" + MeasureSpec.toString(widthMeasureSpec) +
-        //        "] height=[" + View.MeasureSpec.toString(heightMeasureSpec) + "]");
+//        Log.d(TAG, "set width=[" + MeasureSpec.toString(widthMeasureSpec) +
+//                "] height=[" + View.MeasureSpec.toString(heightMeasureSpec) + "]");
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }

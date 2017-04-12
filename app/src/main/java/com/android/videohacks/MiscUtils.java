@@ -22,6 +22,8 @@ import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.android.videohacks.ui.MainActivity;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Arrays;
@@ -31,7 +33,8 @@ import java.util.regex.Pattern;
 /**
  * Some handy utilities.
  */
-public class MiscUtils {
+public class MiscUtils
+{
     private static final String TAG = MainActivity.TAG;
 
     private MiscUtils() {}
@@ -39,11 +42,15 @@ public class MiscUtils {
     /**
      * Obtains a list of files that live in the specified directory and match the glob pattern.
      */
-    public static String[] getFiles(File dir, String glob) {
+    public static String[] getFiles(File dir, String glob)
+    {
         String regex = globToRegex(glob);
         final Pattern pattern = Pattern.compile(regex);
-        String[] result = dir.list(new FilenameFilter() {
-            @Override public boolean accept(File dir, String name) {
+        String[] result = dir.list(new FilenameFilter()
+        {
+            @Override
+            public boolean accept(File dir, String name)
+            {
                 Matcher matcher = pattern.matcher(name);
                 return matcher.matches();
             }
@@ -59,11 +66,10 @@ public class MiscUtils {
      * The regex is suitable for use by Matcher.matches(), which matches the entire string, so
      * we don't specify leading '^' or trailing '$'.
      */
-    private static String globToRegex(String glob) {
+    private static String globToRegex(String glob)
+    {
         // Quick, overly-simplistic implementation -- just want to handle something simple
-        // like "*.mp4".
-        //
-        // See e.g. http://stackoverflow.com/questions/1247772/ for a more thorough treatment.
+        // like "*.mp4". See e.g. http://stackoverflow.com/questions/1247772/ for a more thorough treatment.
         StringBuilder regex = new StringBuilder(glob.length());
         //regex.append('^');
         for (char ch : glob.toCharArray()) {
@@ -82,7 +88,7 @@ public class MiscUtils {
                     break;
             }
         }
-        //regex.append('$');
+//        regex.append('$');
         return regex.toString();
     }
 
@@ -92,7 +98,8 @@ public class MiscUtils {
      * <p>
      * The actual refresh rate can vary slightly (e.g. 58-62fps on a 60fps device).
      */
-    public static long getDisplayRefreshNsec(Activity activity) {
+    public static long getDisplayRefreshNsec(Activity activity)
+    {
         Display display = ((WindowManager)
                 activity.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         double displayFps = display.getRefreshRate();

@@ -22,6 +22,8 @@ import android.util.Log;
 import android.view.InflateException;
 import android.view.View;
 
+import com.android.videohacks.ui.MainActivity;
+
 /**
  * Utility functions for work_dialog.
  */

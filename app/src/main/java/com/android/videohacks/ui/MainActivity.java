@@ -14,16 +14,21 @@
  * limitations under the License.
  */
 
-package com.android.videohacks;
+package com.android.videohacks.ui;
 
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.android.videohacks.AboutBox;
+import com.android.videohacks.ContentManager;
+import com.android.videohacks.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -156,7 +161,8 @@ public class MainActivity extends ListActivity {
             // Do the class name resolution here, so we crash up front rather than when the
             // activity list item is selected if the class name is wrong.
             try {
-                Class cls = Class.forName("com.android.videohacks." + test[2]);
+                Log.e(TAG, "com.android.videohacks.ui" + test[2]);
+                Class cls = Class.forName("com.android.videohacks.ui." + test[2]);
                 intent.setClass(this, cls);
                 tmp.put(CLASS_NAME, intent);
             } catch (ClassNotFoundException cnfe) {

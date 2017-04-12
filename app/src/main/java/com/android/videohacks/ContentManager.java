@@ -25,6 +25,9 @@ import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.android.videohacks.interfaces.Content;
+import com.android.videohacks.ui.MainActivity;
+
 import java.io.File;
 import java.util.ArrayList;
 

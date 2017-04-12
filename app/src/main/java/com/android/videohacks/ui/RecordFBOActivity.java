@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.videohacks;
+package com.android.videohacks.ui;
 
 import android.opengl.GLES20;
 import android.opengl.GLES30;
@@ -35,6 +35,10 @@ import android.widget.TextView;
 import android.app.Activity;
 import android.graphics.Rect;
 
+import com.android.videohacks.MiscUtils;
+import com.android.videohacks.R;
+import com.android.videohacks.TextureMovieEncoder2;
+import com.android.videohacks.VideoEncoderCore;
 import com.android.videohacks.gles.Drawable2d;
 import com.android.videohacks.gles.EglCore;
 import com.android.videohacks.gles.FlatShadedProgram;

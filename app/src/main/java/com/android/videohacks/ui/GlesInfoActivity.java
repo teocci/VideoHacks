@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.videohacks;
+package com.android.videohacks.ui;
 
 import android.opengl.EGL14;
 import android.opengl.GLES20;
@@ -25,6 +25,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.app.Activity;
 
+import com.android.videohacks.R;
 import com.android.videohacks.gles.EglCore;
 import com.android.videohacks.gles.OffscreenSurface;
 

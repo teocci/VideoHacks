@@ -18,6 +18,8 @@ package com.android.videohacks;
 
 import android.util.Log;
 
+import com.android.videohacks.ui.MainActivity;
+
 /**
  * Movie player callback.
  * <p>

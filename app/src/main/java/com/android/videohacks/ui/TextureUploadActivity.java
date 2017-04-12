@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.videohacks;
+package com.android.videohacks.ui;
 
 import android.opengl.GLES20;
 import android.os.AsyncTask;
@@ -31,6 +31,8 @@ import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 
+import com.android.videohacks.R;
+import com.android.videohacks.WorkDialog;
 import com.android.videohacks.gles.Drawable2d;
 import com.android.videohacks.gles.EglCore;
 import com.android.videohacks.gles.GlUtil;

@@ -19,6 +19,8 @@ package com.android.videohacks;
 import android.opengl.GLES20;
 import android.util.Log;
 
+import com.android.videohacks.ui.MainActivity;
+
 import java.io.File;
 import java.io.IOException;
 

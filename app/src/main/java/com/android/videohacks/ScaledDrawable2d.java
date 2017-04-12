@@ -16,6 +16,7 @@
 package com.android.videohacks;
 
 import com.android.videohacks.gles.Drawable2d;
+import com.android.videohacks.ui.MainActivity;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
