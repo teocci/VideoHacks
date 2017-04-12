@@ -11,15 +11,15 @@ import com.github.teocci.videohacks.interfaces.SurfaceTextureReceiver;
 import java.lang.ref.WeakReference;
 
 /**
+ * Handles camera operation requests from other threads.  Necessary because the Camera
+ * must only be accessed from one thread.
+ * <p>
+ * The object is created on the UI thread, and all handlers run there.  Messages are
+ * sent from other threads, using sendMessage().
+ * <p>
  * Created by teocci.
  *
  * @author teocci@yandex.com on 2017/Apr/12
- *         <p>
- *         Handles camera operation requests from other threads.  Necessary because the Camera
- *         must only be accessed from one thread.
- *         <p>
- *         The object is created on the UI thread, and all handlers run there.  Messages are
- *         sent from other threads, using sendMessage().
  */
 public class CameraHandler extends Handler
 {
