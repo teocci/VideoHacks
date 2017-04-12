@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme" >
         <!-- android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" > -->
         <activity
-            android:name="com.android.videohacks.ui.MainActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,31 +26,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.ReadPixelsActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.ReadPixelsActivity"
             android:label="@string/title_activity_read_pixels" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.PlayMovieActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.PlayMovieActivity"
             android:label="@string/title_activity_play_movie" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.LiveCameraActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.LiveCameraActivity"
             android:label="@string/title_activity_live_camera" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.CameraCaptureActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.CameraCaptureActivity"
             android:label="@string/title_activity_camera_capture" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.TextureViewGLActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.CameraCaptureUDPActivity"
+            android:label="@string/title_activity_camera_capture_udp" >
+        </activity>
+        <activity
+            android:name="com.android.videohacks.com.github.videohacks.ui.TextureViewGLActivity"
             android:label="@string/title_activity_texture_view_gl" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.TextureViewCanvasActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.TextureViewCanvasActivity"
             android:label="@string/title_activity_texture_view_canvas" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.RecordFBOActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.RecordFBOActivity"
             android:label="@string/title_activity_record_fbo"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 
@@ -62,59 +66,59 @@
             <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.ChorTestActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.ChorTestActivity"
             android:label="@string/title_activity_chor_test" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.DoubleDecodeActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.DoubleDecodeActivity"
             android:label="@string/title_activity_double_decode" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.ContinuousCaptureActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.ContinuousCaptureActivity"
             android:label="@string/title_activity_continuous_capture" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.SoftInputSurfaceActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.SoftInputSurfaceActivity"
             android:label="@string/title_activity_soft_input_surface" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.HardwareScalerActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.HardwareScalerActivity"
             android:label="@string/title_activity_hardware_scaler"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.GlesInfoActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.GlesInfoActivity"
             android:label="@string/title_activity_gles_info" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.PlayMovieSurfaceActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.PlayMovieSurfaceActivity"
             android:label="@string/title_activity_play_movie_surface" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.MultiSurfaceActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.MultiSurfaceActivity"
             android:label="@string/title_activity_multi_surface_test"
             android:theme="@android:style/Theme.Holo" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.CodecOpenActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.CodecOpenActivity"
             android:label="@string/title_activity_codec_open" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.TextureUploadActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.TextureUploadActivity"
             android:label="@string/title_activity_texture_upload" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.ColorBarActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.ColorBarActivity"
             android:label="@string/title_color_bar"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.ScheduledSwapActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.ScheduledSwapActivity"
             android:label="@string/title_scheduled_swap"
             android:theme="@android:style/Theme.Black" >
         </activity>
         <activity
-            android:name="com.android.videohacks.ui.TextureFromCameraActivity"
+            android:name="com.android.videohacks.com.github.videohacks.ui.TextureFromCameraActivity"
             android:label="@string/title_texture_from_camera"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>

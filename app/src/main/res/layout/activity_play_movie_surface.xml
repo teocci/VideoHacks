@@ -22,7 +22,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ui.PlayMovieSurfaceActivity" >
+    tools:context="com.github.teocci.videohacks.ui.PlayMovieSurfaceActivity" >
 
     <Button
         android:id="@+id/play_stop_button"
@@ -40,7 +40,7 @@
         android:layout_alignTop="@id/play_stop_button"
         android:layout_toRightOf="@id/play_stop_button" />
 
-    <com.android.videohacks.AspectFrameLayout
+    <com.github.teocci.videohacks.utils.AspectFrameLayout
         android:id="@+id/playMovie_afl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,6 +53,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center" />
 
-    </com.android.videohacks.AspectFrameLayout>
+    </com.github.teocci.videohacks.utils.AspectFrameLayout>
 
 </RelativeLayout>
