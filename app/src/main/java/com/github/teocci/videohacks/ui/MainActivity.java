@@ -150,8 +150,8 @@ public class MainActivity extends ListActivity
             // Do the class name resolution here, so we crash up front rather than when the
             // activity list item is selected if the class name is wrong.
             try {
-                Log.e(TAG, "com.android.videohacks.ui" + test[2]);
-                Class cls = Class.forName("com.android.videohacks.ui." + test[2]);
+                Log.e(TAG, "com.github.teocci.videohacks.ui" + test[2]);
+                Class cls = Class.forName("com.github.teocci.videohacks.ui." + test[2]);
                 intent.setClass(this, cls);
                 tmp.put(CLASS_NAME, intent);
             } catch (ClassNotFoundException cnfe) {
